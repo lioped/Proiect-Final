@@ -4,7 +4,7 @@
   "description": "final project",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.htmlnpm"
+    "build": "parcel build index.html"
   },
   "author": "Palade Eric",
   "license": "ISC",
