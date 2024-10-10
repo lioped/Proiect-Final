@@ -1,0 +1,176 @@
+@import "base";
+@import "variables";
+
+#single-product-page {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .product-shop__bread-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: $color-grand-1;
+    padding: 31px 0;
+
+    .bread-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 80%;
+
+      a {
+        font-weight: 400;
+        line-height: 1.5rem;
+        color: $color-gray-4;
+        text-decoration: none;
+        padding-right: 0.875rem;
+      }
+      .arrow {
+        font-size: 1.25rem;
+        padding-right: 31px;
+      }
+      .product__name {
+        font-weight: 400;
+        line-height: 1.5rem;
+        color: $color-dark;
+        border-left: 2px solid $color-gray-4;
+        padding-left: 2.125rem;
+      }
+    }
+  }
+  .single-product__container {
+    padding-top: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    .image-product {
+      img {
+        width: 423px;
+        height: 500px;
+        border-radius: 10px;
+      }
+    }
+    .details-product {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 105px;
+
+      .details-product_container {
+        border-bottom: 1px solid $color-gray-4;
+        width: 606.01px;
+
+        .heder-product__informations {
+          .title-product {
+            font-weight: 400;
+            font-size: 2.625rem;
+            line-height: 3.938rem;
+            color: $color-dark;
+          }
+          .price-product {
+            font-size: 1.5rem;
+            line-height: 2.25rem;
+            padding-bottom: 15px;
+            color: $color-gray-4;
+            font-weight: 500;
+          }
+          .review {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-bottom: 13px;
+
+            span {
+              color: #b88e2f;
+              height: 18px;
+              width: 18px;
+              padding: 5px 7px 5px 0;
+              &:nth-of-type(5) {
+                padding-right: 18px;
+              }
+            }
+            .number-reviews {
+              font-size: 13px;
+              font-weight: 400;
+              line-height: 19.5px;
+              text-align: left;
+              border-left: 1px solid #9f9f9f;
+              padding-left: 22px;
+              padding-top: 5px;
+              padding-bottom: 5px;
+              display: flex;
+              flex-direction: row;
+              color: #9f9f9f;
+            }
+            .customer-review {
+              padding-left: 5px;
+              font-family: "Poppins";
+              font-size: 13px;
+              font-weight: 400;
+              line-height: 19.5px;
+              text-align: left;
+              color: #9f9f9f;
+            }
+          }
+        }
+        .description {
+          width: 424px;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 19.5px;
+          text-align: left;
+          color: $color-dark;
+          padding-bottom: 22px;
+        }
+
+        .btn--add__to__cart {
+          padding-bottom: 60px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 18px;
+          .quantity {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            width: 123px;
+            height: 64px;
+            gap: 35;
+            border: 10px;
+            border: 1px solid $color-gray-4;
+            .quantity-btn {
+              font-weight: 400;
+              line-height: 1.5rem;
+              text-align: center;
+              border: none;
+              cursor: pointer;
+              background: transparent;
+              font-size: 20;
+            }
+          }
+          .style_btn {
+            width: 215px;
+            height: 64px;
+            border: 1px solid $color-dark;
+            border-radius: 15px;
+            background: transparent;
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background-color: $color-primary;
+              color: $color-white;
+              border: 1px solid $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

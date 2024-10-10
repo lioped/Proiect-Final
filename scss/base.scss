@@ -1,0 +1,16 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-Poppins;
+  color: $color-dark;
+  line-height: 1.6;
+}
