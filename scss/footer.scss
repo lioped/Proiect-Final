@@ -9,7 +9,7 @@ footer {
   border-top: 1px solid $color-gray-4;
 
   .upper-part {
-    padding: 3rem 0;
+    padding: 48px 0;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -17,7 +17,7 @@ footer {
     width: 80%;
 
     .address {
-      padding-right: 8.5rem;
+      padding-right: 136px;
       display: flex;
       align-items: flex-start;
       flex-direction: column;
@@ -26,12 +26,12 @@ footer {
       .furniro-title {
         font-size: 1.5rem;
         font-weight: 700;
-        line-height: 2.25rem;
+        line-height: 36px;
         color: $color-dark;
       }
       p {
         font-weight: 400;
-        line-height: 1.5rem;
+        line-height: 24px;
         text-align: left;
         color: $color-gray-4;
       }
@@ -39,14 +39,14 @@ footer {
     .information {
       display: flex;
       align-items: flex-start;
-      gap: 144;
+      gap: 144px;
       flex-direction: row;
       .links {
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
-        gap: 55;
+        gap: 55px;
         .link-title {
           font-weight: 500;
           text-align: left;
@@ -55,13 +55,13 @@ footer {
         .list-of-footer__links {
           display: flex;
           flex-direction: column;
-          gap: 45;
+          gap: 45px;
           li {
             list-style: none;
             a {
               text-decoration: none;
               font-weight: 500;
-              line-height: 1.5rem;
+              line-height: 24px;
               color: $color-dark;
             }
           }
@@ -71,25 +71,25 @@ footer {
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
-        gap: 55;
+        gap: 55px;
         flex-direction: column;
-        padding-right: 4.5rem;
+        padding-right: 72px;
         .help-title {
           font-weight: 500;
-          line-height: 1.5rem;
+          line-height: 24px;
           text-align: left;
           color: $color-gray-4;
         }
         ul {
           display: flex;
           flex-direction: column;
-          gap: 45;
+          gap: 45px;
           li {
             list-style: none;
             a {
               text-decoration: none;
               font-weight: 500;
-              line-height: 1.5rem;
+              line-height: 24px;
               color: $color-dark;
             }
           }
@@ -101,23 +101,23 @@ footer {
       align-items: flex-start;
       justify-content: flex-start;
       flex-direction: column;
-      gap: 60;
+      gap: 60px;
       .footer-title {
         color: $color-gray-4;
         text-align: left;
-        line-height: 1.5rem;
+        line-height: 24px;
         font-weight: 500;
       }
       .footer-form {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        gap: 12;
+        gap: 12px;
         input {
           font-family: $font-Poppins;
           font-size: 0.875rem;
           font-weight: 400;
-          line-height: 1.313rem;
+          line-height: 21px;
           text-align: left;
           color: $color-gray-4;
           border: none;
@@ -133,7 +133,7 @@ footer {
           font-family: $font-Poppins;
           font-size: 0.875rem;
           font-weight: 500;
-          line-height: 1.313rem;
+          line-height: 21px;
           color: $color-dark;
           background: transparent;
           border: none;
@@ -155,10 +155,10 @@ footer {
     width: 80%;
     border-top: 1px solid $color-gray-4;
     .reserve-rights {
-      padding: 2.188rem 0;
+      padding: 35px 0;
       span {
         font-weight: 400;
-        line-height: 1.5rem;
+        line-height: 24px;
         text-align: left;
         color: $color-dark;
       }

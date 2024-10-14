@@ -3,7 +3,7 @@
 
 .home-page {
   // for now
-  margin-bottom: 5.063rem;
+  margin-bottom: 81px;
   // display: flex;
   // justify-content: center;
   // flex-direction: column;
@@ -19,8 +19,8 @@
 
     .hero-container {
       position: absolute;
-      width: 40.188rem;
-      height: 27.688rem;
+      width: 643px;
+      height: 443px;
       top: 254;
       right: 57;
       border-radius: 10px;
@@ -29,41 +29,42 @@
       .hero-content {
         display: flex;
         flex-direction: column;
-        padding: 3.875rem 2.438rem 2.313rem 2.688rem;
+        padding: 62px 39px 37px 43px;
 
         .arrivals-small--text {
           font-weight: 600;
-          line-height: 1.5rem;
+          line-height: 24px;
           text-align: left;
           color: $color-gray-1;
-          margin-bottom: 0.25rem;
+          margin-bottom: 4px;
         }
         .main-heading {
           font-size: 3.25rem;
           font-weight: 700;
-          line-height: 4.063rem;
+          line-height: 65px;
           text-align: left;
           color: $color-primary;
         }
         .hero-text {
           font-size: 1.125rem;
           font-weight: 500;
-          line-height: 1.5rem;
+          line-height: 24px;
           text-align: left;
           color: $color-gray-1;
           display: flex;
           flex-wrap: wrap;
-          margin: 1.063rem 0 2.875rem 0;
+          margin: 17px 0 46px 0;
         }
         .hero--buton__buy__now {
           max-width: 230px;
           font-weight: 700;
           color: $color-white;
-          padding: 1.563rem 4.688rem;
+          padding: 25px 75px;
           background-color: $color-primary;
           text-transform: uppercase;
           border: none;
           cursor: pointer;
+          font-family: $font-Poppins;
           &:hover {
             background-color: $color-grand-3;
             transform: scale(1.05);
@@ -79,12 +80,12 @@
     justify-content: center;
     align-items: center;
     gap: 32px;
-    margin-bottom: 5.063rem;
+    margin-bottom: 81px;
 
     h2 {
       font-weight: 700;
       font-size: 2.5rem;
-      line-height: 3rem;
+      line-height: 48px;
       text-align: center;
       color: $color-gray-2;
     }
@@ -92,7 +93,6 @@
     .container-cards {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 1fr);
       grid-column-gap: 32px;
       grid-row-gap: 32px;
 
@@ -130,7 +130,7 @@
             }
 
             .description-card {
-              font-size: 12px;
+              font-size: 0.75rem;
               font-weight: 500;
               line-height: 24px;
               text-align: left;
@@ -163,7 +163,7 @@
 
             button {
               font-family: "Poppins";
-              font-size: 16px;
+              font-size: 1rem;
               font-weight: 600;
               line-height: 24px;
               text-align: left;
@@ -193,7 +193,7 @@
                 color: #ffffff;
                 font-family: "Poppins";
                 font-weight: 600;
-                font-size: 16px;
+                font-size: 1rem;
                 line-height: 24px;
                 transition: all 0.3s ease-in;
                 &:hover {
@@ -213,7 +213,7 @@
       font-size: 1rem;
       font-family: $font-Poppins;
       font-weight: 600;
-      line-height: 1.5rem;
+      line-height: 24px;
       text-align: center;
       cursor: pointer;
       border: 1px solid $color-primary;
