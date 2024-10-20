@@ -57,8 +57,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .container-cards {
+    .shop-cards {
       display: grid;
+
       grid-template-columns: repeat(4, 1fr);
 
       grid-column-gap: 32px;

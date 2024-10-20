@@ -147,9 +147,7 @@ header {
         font-weight: 600;
         line-height: 36px;
       }
-      .close-icon {
-        padding-left: 42px;
-        padding-bottom: 28px;
+      .close {
         cursor: pointer;
       }
     }
@@ -161,6 +159,70 @@ header {
       margin-top: 42px;
       height: 300px;
       overflow: auto;
+
+      .product-added {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        .item-added-photo {
+          padding-right: 35px;
+          img {
+            width: 105px;
+            height: 105px;
+            border-radius: 10px;
+          }
+        }
+        .details-add-to {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+          padding-right: 60px;
+          width: 130px;
+          h6 {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 24px;
+            color: $color-dark;
+          }
+          .price-total-per-product {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            .quantity-added {
+              font-size: 1rem;
+              font-weight: 300;
+              line-height: 24px;
+              color: $color-dark;
+              padding-right: 15px;
+            }
+            .ori {
+              font-family: "Poppins";
+              font-size: 12px;
+              font-weight: 300;
+              line-height: 18px;
+              color: #000000;
+              padding-right: 15px;
+            }
+            .total-price-one-p {
+              color: $color-primary;
+              font-size: 0.75rem;
+              font-weight: 500;
+              line-height: 18px;
+              text-align: left;
+            }
+          }
+        }
+        .delete-product {
+          span {
+            cursor: pointer;
+          }
+        }
+      }
     }
 
     .subtotal-cart {
@@ -180,7 +242,7 @@ header {
           text-align: left;
         }
 
-        .subtoal-price__cart {
+        .subtotal-price__cart {
           font-weight: 600;
           text-align: left;
           line-height: 32px;
