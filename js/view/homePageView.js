@@ -50,7 +50,7 @@ class HomePageView {
     card.addEventListener("mouseenter", () => {
       timer = setTimeout(() => {
         hover.classList.add("hoverd");
-      }, 200);
+      }, 1000);
     });
 
     card.addEventListener("mouseleave", () => {

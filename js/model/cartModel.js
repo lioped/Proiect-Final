@@ -6,10 +6,12 @@ class CartModel {
   addItem(product) {
     const existingProduct = this.cart.find((item) => item.id === product.id);
     if (existingProduct) {
-      existingProduct.quantity += 1; // Increment quantity
+      existingProduct.quantity += product.quantity; // Increment quantity
+      console.log(`Updated product in cart:`, existingProduct); // Log the updated product
     } else {
-      product.quantity = 1; // Set initial quantity
+      // product.quantity = 1; // Set initial quantity
       this.cart.push(product); // Add new product to cart
+      console.log(`Added new product to cart:`, product); // Log the newly added product
     }
     this.save();
   }

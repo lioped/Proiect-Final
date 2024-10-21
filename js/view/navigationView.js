@@ -1,3 +1,5 @@
+import singleProduct from "./singleProduct";
+
 class NavigatioView {
   constructor() {
     this.hamburgerMenu = document.querySelector(".hamburger-menu");
@@ -181,6 +183,13 @@ class NavigatioView {
       this.singleProductPage.style.display = "none";
       this.checkoutPage.style.display = "none";
       this.shopPage.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    document.addEventListener("click", (event) => {
+      if (event.target.closest(".card")) {
+        const productId = event.target.closest(".card").dataset.id;
+        singleProduct.fetchAndDisplayProduct(productId); // Fetch and display the single product
+      }
     });
   }
 }
