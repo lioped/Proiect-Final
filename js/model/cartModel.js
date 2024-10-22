@@ -7,11 +7,10 @@ class CartModel {
     const existingProduct = this.cart.find((item) => item.id === product.id);
     if (existingProduct) {
       existingProduct.quantity += product.quantity; // Increment quantity
-      console.log(`Updated product in cart:`, existingProduct); // Log the updated product
     } else {
       // product.quantity = 1; // Set initial quantity
       this.cart.push(product); // Add new product to cart
-      console.log(`Added new product to cart:`, product); // Log the newly added product
+      // console.log(`Added new product to cart:`, product);
     }
     this.save();
   }
@@ -27,6 +26,11 @@ class CartModel {
 
   save() {
     localStorage.setItem("cart", JSON.stringify(this.cart)); // Save cart to local storage
+  }
+
+  clearCart() {
+    this.cart = [];
+    localStorage.removeItem("cart");
   }
 }
 

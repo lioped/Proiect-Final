@@ -147,7 +147,7 @@ class NavigatioView {
       this.homePage.style.display = "flex";
       this.singleProductPage.style.display = "none";
       this.checkoutPage.style.display = "none";
-      homePage.scrollIntoView({
+      this.homePage.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });

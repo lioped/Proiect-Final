@@ -90,14 +90,12 @@ class SingleProduct {
 
   increaseQuantity() {
     this.selectedQuantity += 1;
-    console.log(this.selectedQuantity);
     this.updateQuantityDisplay();
   }
 
   decreaseQuantity() {
     if (this.selectedQuantity > 1) {
       this.selectedQuantity -= 1;
-      console.log(this.selectedQuantity);
       this.updateQuantityDisplay();
     }
   }
@@ -111,8 +109,6 @@ class SingleProduct {
     // Create a new product object with the selected quantity
     const productToAdd = { ...product, quantity: this.selectedQuantity }; // Use the selected quantity
     cartModel.addItem(productToAdd); // Add the product with the selected quantity
-    console.log(`${product.title} added to cart with quantity ${this.selectedQuantity}!`); // Log the action
-
     cartView.renderCartItems(cartModel.getItems()); // Refresh the cart view
   }
 }

@@ -14,3 +14,15 @@ body {
   color: $color-dark;
   line-height: 1.6;
 }
+
+.order-modal {
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: -100px; /* Start off-screen */
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: top 0.3s ease;
+}

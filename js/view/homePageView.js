@@ -1,5 +1,7 @@
 import cartModel from "../model/cartModel"; // Import cart model
 import cartView from "../view/cartView"; // Import cart view
+import productModel from "../model/productModel";
+import singleProduct from "./singleProduct";
 
 class HomePageView {
   constructor() {}
@@ -41,28 +43,50 @@ class HomePageView {
         </div>
       </div>
     `;
-    cardsContainer.appendChild(card);
 
-    // Hover functionality
-    const hover = card.querySelector(".hover");
+    cardsContainer.appendChild(card);
+    this.setupHoverEffect(card);
+  }
+
+  setupHoverEffect(card) {
+    const hoverContainer = card.querySelector(".hover"); // Target the hover container
+    const itemContent = card.querySelector(".item");
+    const addToCartButton = card.querySelector(".add-to__cart");
+
     let timer;
 
+    // Show hover effect on mouse enter
     card.addEventListener("mouseenter", () => {
       timer = setTimeout(() => {
-        hover.classList.add("hoverd");
-      }, 1000);
+        hoverContainer.classList.add("hoverd"); // Add the class to show the hover effect
+      }, 1000); // Adjust the delay as needed
     });
 
+    // Hide hover effect on mouse leave
     card.addEventListener("mouseleave", () => {
       clearTimeout(timer);
-      hover.classList.remove("hoverd");
+      hoverContainer.classList.remove("hoverd"); // Remove the hover effect class
     });
 
-    // Add to cart event
-    card.querySelector(".add-to__cart").addEventListener("click", () => {
-      cartModel.addItem(product); // Add product to cart model
-      console.log(`${product.title} added to cart!`); // Log for confirmation
-      cartView.renderCartItems(cartModel.getItems()); // Render cart items after adding
+    // Handle click on the item to navigate to the single product page
+    itemContent.addEventListener("click", () => {
+      const productId = card.dataset.id; // Get the product ID from the card
+      const product = productModel.products.find((item) => item.id === Number(productId));
+      if (product) {
+        singleProduct.fetchAndDisplayProduct(productId); // Show the single product
+      }
+    });
+
+    // Handle click on the add to cart button
+    addToCartButton.addEventListener("click", (event) => {
+      event.stopPropagation(); // Prevent the item click event from firing
+      const productId = card.dataset.id; // Get the product ID from the card
+      const product = productModel.products.find((item) => item.id === Number(productId));
+      if (product) {
+        cartModel.addItem({ ...product, quantity: 1 }); // Set the quantity to 1 for the new item
+        console.log(`${product.title} added to cart!`); // Log for confirmation
+        cartView.renderCartItems(cartModel.getItems()); // Render cart items after adding
+      }
     });
   }
 }
