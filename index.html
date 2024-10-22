@@ -3,7 +3,271 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/imgs/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="scss/main.scss" />
+    <script defer type="module" src="js/controller.js"></script>
     <title>Furniro Shop</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo-links">
+          <div class="hamburger-menu">
+            <span class="material-symbols-outlined close-hamburger"> close </span>
+            <div class="links-hamburger-meniu">
+              <a href="#" class="hamburger-link-home _link">Home</a>
+              <a href="#" class="hamburger-link-shop _link">Shop</a>
+            </div>
+          </div>
+
+          <div class="logo">
+            <div class="hamburger-meniu-icon">
+              <span class="material-symbols-outlined hamburger-menu-open">menu</span>
+            </div>
+            <img src="imgs/Meubel House_Logos-05@2x.png" alt="company logo" class="company-logo" />
+            <span class="title-company-name">Furniro</span>
+          </div>
+          <nav class="navbar-links">
+            <a href="#" class="home-link link">Home</a>
+            <a href="#" class="shop-link link">Shop</a>
+          </nav>
+        </div>
+        <div class="cart-icon">
+          <span class="material-symbols-outlined cart-icon-btn"> shopping_cart </span>
+        </div>
+      </div>
+
+      <div class="cart-menu">
+        <div class="cart-header">
+          <span class="title-shopping__cart">Shopping Cart</span>
+          <span class="material-symbols-outlined close"> close </span>
+        </div>
+        <div class="cart-list"></div>
+        <div class="subtotal-cart">
+          <div class="space-for__mobile">
+            <span class="subtotal-span">Subtotal</span>
+            <p class="subtotal-price__cart">$0</p>
+          </div>
+        </div>
+        <div class="checkout-cart">
+          <button class="cart-button cart-btn">Cart</button>
+          <button class="checkout-btn cart-btn">Checkout</button>
+          <button class="comprasion-btn-checkout cart-btn">Comparsion</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="home-page" id="home">
+        <div class="hero-banner">
+          <div class="hero-container">
+            <div class="hero-content">
+              <span class="arrivals-small--text">New Arrival</span>
+              <h1 class="main-heading">
+                Discover Our <br />
+                New Collection
+              </h1>
+              <p class="hero-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem a vero consequatur quod velit eos.</p>
+              <button class="hero--buton__buy__now">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <article class="our-products">
+          <h2>Our Products</h2>
+          <div class="container-cards"></div>
+          <button class="our-button__show--more">Show More</button>
+        </article>
+      </section>
+
+      <!--Shop Page-->
+      <section class="shop-page" id="shop">
+        <article class="banner">
+          <div class="shop-bread-crumb">
+            <h2>Shop</h2>
+            <div class="bread-c">
+              <a href="#">Home</a>
+              <span class="material-symbols-outlined arrow"> chevron_right </span>
+              <span class="shop--span">Shop</span>
+            </div>
+          </div>
+        </article>
+        <article class="display-products">
+          <div class="shop-cards"></div>
+        </article>
+      </section>
+
+      <!-- single prodcut -->
+      <section class="single-product__page" id="single-product">
+        <div class="product-shop__bread-c">
+          <div class="bread-container">
+            <a href="#" class="back-home">Home</a>
+            <span class="material-symbols-outlined arrow"> chevron_right </span>
+            <a href="#" class="back-shop">Shop</a>
+            <span class="material-symbols-outlined arrow"> chevron_right </span>
+            <span class="product__name">Asgarda Sofa</span>
+          </div>
+        </div>
+        <div class="single-product__container">
+          <div class="image-product">
+            <img src="/imgs/image 3.png" alt="" class="product_img" />
+          </div>
+          <div class="details-product">
+            <div class="details-product_container">
+              <div class="heder-product__informations">
+                <h2 class="title-product">Asgarda sofa</h2>
+                <span class="price-product">$700</span>
+                <div class="review">
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <span class="material-symbols-outlined">star</span>
+                  <p class="number-reviews">800</p>
+                  <p class="customer-review">Customer Reviews</p>
+                </div>
+              </div>
+              <p class="description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde provident nesciunt quidem dolore laudantium officiis impedit, officia dignissimos ut molestiae quo iste hic culpa earum
+                fugiat quasi veniam, ullam nisi est dicta.
+              </p>
+              <div class="btn--add__to__cart">
+                <div class="quantity">
+                  <button class="quantity-btn decrease">-</button>
+                  <span class="quantityDisplay"></span>
+                  <button class="quantity-btn increase">+</button>
+                </div>
+                <button class="add_to_cart style_btn">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cart-checkout" class="checkout-section">
+        <div class="banner">
+          <div class="shop-bread-crumb">
+            <h2>Checkout</h2>
+            <div class="bread-c">
+              <a href="#" class="home-link-checkout">Home</a>
+              <span class="material-symbols-outlined arrow"> chevron_right </span>
+              <span class="shop--span">Checkout</span>
+            </div>
+          </div>
+        </div>
+        <div class="information-order">
+          <aside class="form-costumer">
+            <h2>Billing details</h2>
+            <form action="" id="form--contact" method="POST">
+              <div class="full-name">
+                <div class="first-name">
+                  <label for="firstName">First Name</label>
+                  <input type="text" id="firstName" name="firstName" required />
+                </div>
+                <div class="last-name">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" id="lastName" name="lastName" required />
+                </div>
+              </div>
+              <div class="street__address">
+                <label for="address">Street address</label>
+                <input type="text" id="address" name="address" required />
+              </div>
+              <div class="town__city">
+                <label for="town">Town / City</label>
+                <input type="text" id="town" name="town" required />
+              </div>
+            </form>
+          </aside>
+          <aside class="cart-checkout__total">
+            <div class="products-total">
+              <div class="info_product">
+                <span>Product</span>
+                <span>Subtotal</span>
+              </div>
+              <div class="cart-list__check"></div>
+              <div class="subtotal-checkout">
+                <span>Subtotal</span>
+                <span class="subtotal-js">$0.00</span>
+              </div>
+              <div class="total">
+                <h5>Total</h5>
+                <span class="subtotal-js">$0.00</span>
+              </div>
+            </div>
+            <div class="cash--privacy__policy">
+              <div class="radio-cash__options">
+                <form>
+                  <label>
+                    <input type="radio" name="Cash on delivery" value="cash on delivery" />
+                    <span>Cash on Delivery</span>
+                  </label>
+                </form>
+              </div>
+              <div class="place-order">
+                <p>
+                  Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our
+                  <strong> privacy policy. </strong>
+                </p>
+                <button class="btn-place__order">Place order</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section class="upper-part">
+        <div class="address">
+          <span class="furniro-title">Furniro.</span>
+          <p class="address-info">
+            400 University Drive Suite 200 Coral Gables,<br />
+            FL 33134 USA
+          </p>
+        </div>
+        <div class="information">
+          <div class="links">
+            <h3 class="link-title">Links</h3>
+            <ul class="list-of-footer__links">
+              <li><a href="#" class="home-link__footer">Home</a></li>
+              <li><a href="#" class="shop-link__footer">Shop</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="help">
+            <h3 class="help-title">Help</h3>
+            <ul class="help-list">
+              <li><a href="#">Payement Options</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Privacy Policies</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="newslatter">
+          <h3 class="footer-title">Newslatter</h3>
+          <form class="footer-form">
+            <input type="email" id="email" name="email" placeholder="Enter Your Email address" />
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+        </div>
+      </section>
+      <section class="bottom-part">
+        <div class="reserve-rights">
+          <span>2024 Furniro. All rights reserved.</span>
+        </div>
+      </section>
+    </footer>
+    <div class="order-modal" style="display: none">
+      <div class="modal-content">
+        <p class="modal-message"></p>
+      </div>
+    </div>
+  </body>
 </html>

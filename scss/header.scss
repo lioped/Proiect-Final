@@ -1,0 +1,279 @@
+@import "base";
+@import "variables";
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 90%;
+
+    .hamburger-menu {
+      width: 400px;
+      height: 100vh;
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: -500px;
+      z-index: 100;
+      background-color: $color-white;
+      box-shadow: 70px 0 60px rgba(0, 0, 0, 0.105);
+      transition: all 0.3s linear;
+      flex-direction: column;
+      padding: 50px;
+      gap: 10%;
+
+      &.open-menu {
+        left: 0;
+      }
+
+      span {
+        font-weight: 700;
+        font-size: 1.875rem;
+      }
+
+      .links-hamburger-meniu {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        flex-direction: column;
+
+        ._link {
+          text-decoration: none;
+          font-size: 34px;
+          font-family: $font-Montserrat;
+          padding-left: 10px;
+          text-align: left;
+          color: $color-dark;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .logo-links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 266px;
+
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .hamburger-meniu-icon {
+          display: none;
+
+          span {
+            transition: all 0.3s linear;
+          }
+        }
+        img {
+          width: 50px;
+          height: 32px;
+        }
+        .title-company-name {
+          font-family: $font-Montserrat;
+          font-size: 1.25rem;
+          font-weight: 700;
+          padding-left: 5px;
+        }
+      }
+    }
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 75px;
+
+      .link {
+        text-decoration: none;
+        font-weight: 500;
+        line-height: 24px;
+        color: $color-dark;
+        cursor: pointer;
+        transition: color 0.3 ease, transofrm 03s ease;
+        &:hover {
+          color: $color-primary;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .cart-icon {
+    span {
+      font-size: 1.75rem;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        color: $color-primary;
+      }
+    }
+  }
+
+  .cart-menu {
+    display: none;
+    width: 417px;
+    height: auto;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -500px;
+    z-index: 900;
+    background-color: $color-white;
+    box-shadow: 70px 0 60px rgba(0, 0, 0, 0.105);
+    transition: all 0.3s linear;
+    flex-direction: column;
+    color: $color-dark;
+    &.open {
+      right: 0;
+    }
+
+    .cart-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      padding-top: 30px;
+      gap: 110px;
+
+      .title-shopping__cart {
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 36px;
+      }
+      .close {
+        cursor: pointer;
+      }
+    }
+    .cart-list {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 42px;
+      height: 300px;
+      overflow: auto;
+
+      .product-added {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        .item-added-photo {
+          padding-right: 35px;
+          img {
+            width: 105px;
+            height: 105px;
+            border-radius: 10px;
+          }
+        }
+        .details-add-to {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+          padding-right: 60px;
+          width: 130px;
+          h6 {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 24px;
+            color: $color-dark;
+          }
+          .price-total-per-product {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            .quantity-added {
+              font-size: 1rem;
+              font-weight: 300;
+              line-height: 24px;
+              color: $color-dark;
+              padding-right: 15px;
+            }
+            .ori {
+              font-family: "Poppins";
+              font-size: 12px;
+              font-weight: 300;
+              line-height: 18px;
+              color: #000000;
+              padding-right: 15px;
+            }
+            .total-price-one-p {
+              color: $color-primary;
+              font-size: 0.75rem;
+              font-weight: 500;
+              line-height: 18px;
+              text-align: left;
+            }
+          }
+        }
+        .delete-product {
+          span {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .subtotal-cart {
+      .space-for__mobile {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 100px;
+        padding: 23px 0;
+        border-bottom: 1px solid $color-gray-5;
+
+        .subtotal-span {
+          padding-left: 40px;
+          font-weight: 400;
+          line-height: 32px;
+          text-align: left;
+        }
+
+        .subtotal-price__cart {
+          font-weight: 600;
+          text-align: left;
+          line-height: 32px;
+          color: $color-primary;
+        }
+      }
+    }
+    .checkout-cart {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      padding: 26px 0;
+      gap: 14px;
+
+      .cart-btn {
+        font-size: 0.75rem;
+        font-weight: 400;
+        line-height: 18px;
+        padding: 6px 30px;
+        border-radius: 50px;
+        text-align: center;
+        color: $color-dark;
+        background: transparent;
+        border: 1px solid $color-dark;
+        cursor: pointer;
+        &:hover {
+          border: 1px solid $color-white;
+          background-color: $color-primary;
+        }
+      }
+    }
+  }
+}
