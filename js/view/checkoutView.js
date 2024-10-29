@@ -47,11 +47,24 @@ class checkoutView {
       return;
     }
 
+    const formInputs = document.querySelectorAll(".form-input");
+    let isValid = true;
+
+    formInputs.forEach((input) => {
+      if (!input.value) {
+        alert(`You need to fill the inputs!`);
+        isValid = false;
+      }
+    });
+    if (!isValid) {
+      return;
+    }
+
     cartModel.clearCart();
 
-    document.querySelectorAll(".subtotal-js").textContent = "00.00$";
+    this.clearCartDispaly();
 
-    const formInputs = document.querySelectorAll("input[type='text'], input[type='number']");
+    //Clear the form inputs
     formInputs.forEach((input) => (input.value = ""));
 
     // Update the cart view to reflect the empty cart
@@ -70,6 +83,11 @@ class checkoutView {
       this.modal.style.display = "none";
       // Hide after a delay
     }, 3000); // Show for 3 seconds
+  }
+  clearCartDispaly() {
+    this.cartItemContainer.innerHTML = "";
+    document.querySelector(".subtotal-js").textContent = "0.00";
+    document.querySelector(".total-checkout").textContent = "0.00";
   }
 }
 
